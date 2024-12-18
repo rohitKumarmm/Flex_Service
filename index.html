@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <!-- <script src="index.js" defer></script> -->
+    <!-- <link rel="stylesheet" href="stylee.css"> -->
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><img src="logo.jpeg" alt="Flex Services Logo" class="logo-img">
+            <span>Flex Services</span></div>
+        <ul class="nav-links">
+
+            <li><a href="javascript:void(0);" onclick="showHomeSection()">Home</a></li>
+            <li><a href="javascript:void(0);" onclick="showAboutUsSection()">About Us</a></li>
+            <li><a href="javascript:void(0);" onclick="showServicesSection()">Services</a></li>
+            <li><a href="javascript:void(0);" onclick="showPricingSection()">Pricing & Contact</a></li>
+            <!-- <li><a href="javascript:void(0);" onclick="showPricingSection()">Contact</a></li> -->
+            
+        </ul>
+    </nav>
+
+    <section class="hero" id="home-section">
+        <h1>Welcome to Flex Services</h1>
+        <p>Right Channel - Right Audience - Right Time</p>
+    </section>
+    <section id="AboutUs-section" class="target-section AboutUs">
+        <div class="content-box">
+            <h2>About Us</h2>
+        </div> 
+        <div class="about-content">
+            <p>
+                We began helping companies from various domains acquire traction in 2023. 
+                We are one of Bangalore's top providers of digital marketing and sales services, 
+                with more than fifty clients. Whether it's revenue generation, digital marketing, 
+                or sales and marketing strategy, our team will support your company to achieve 
+                greater success.
+            </p>
+        </div>
+    </section>
+    
+
+    <section id="services-section" class="target-section services">
+        <div class="content-box">
+            <h2>Our Services</h2>
+        </div>
+        <div class="services-container">
+            <div class="service-tile">
+                <h3>Web Development</h3>
+                <p> 'We are aware that having a strong and effective technological foundation to support flawless UX/UI is just as important for a successful online presence as having aesthetically pleasing designs. We create dynamic websites that are scalable, responsive, and performant.</p>
+            </div>
+            <div class="service-tile">
+                <h3>SEO</h3>
+                <p>'To help businesses rank in the targeted geography, we mix sophisticated inbound content marketing, increased marketing strategies, and innovative SEO procedures for steady flow of high-converting organic traffic.'</p>
+            </div>
+            <div class="service-tile">
+                <h3>SEM</h3>
+                <p>We work with you to improve audience engagement, develop successful online advertising campaigns, and expand your business by utilizing industry experience, best practices, and the newest technology.</p>
+            </div>
+            <div class="service-tile">
+                <h3>Ad Words Management</h3>
+                <p>We help your ad performance to identify what is and is not working before deciding what has to be changed. There are five important metrics we consider: clicks, impressions, cost, conversions, and click-through rate (CTR).</p>
+            </div>
+            <div class="service-tile">
+                <h3>Sales Assistance</h3>
+                <p>We have consultants who can help you to build sales strategy, GTM, Marketing Strategy, Lead generation, Closures and Documentation.</p>
+            </div>
+            <div class="service-tile">
+                <h3>Social Media Marketing</h3>
+                <p>We help to Humanize your business, Drive traffic, Generate leads and customers, Increase brand awareness, Build relationships through different social media platforms.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- <section id="contact-section" class="target-section contact">
+        <div class="content-box">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="tile-menu">
+            <div class="tile">
+                <h4></h4>
+                <p>kiranchougala.business@gmail.com</p>
+            </div>
+            <div class="tile">
+                <h4></h4>
+                <p>+91 903 658 4366</p>
+            </div>
+            <div class="tile">
+                <h4></h4>
+                <p>Bangalore, India</p>
+            </div>
+    </section> -->
+    <!-- <section id="pricing-section" class="target-section pricing">
+        <div class="content-box">
+            <h2>Pricing Plans</h2>
+        </div>
+        <div class="pricing-card">
+            <p>Contact Flex Services for Pricing</p>
+        
+        <div class="form-card">
+            <form action="/post"  method="POST" id="response-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required />
+    
+                <label for="contact">Contact Number:</label>
+                <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" required />
+    
+                <button type="submit">Submit</button>
+            </form>
+            <p id="submission-message" style="display: none; color: green; font-weight: bold;">
+                Your response has been sent!
+            </p>
+        </div>
+        </div>
+    </section> -->
+    <section id="pricing-section" class="target-section pricing">
+        <div class="content-box">
+            <h2>Pricing Plans</h2>
+        </div>
+        <div class="pricing-card">
+            <p>Contact Flex Services for Pricing</p>
+    
+            <div class="form-card">
+                <form action="/post" method="POST" id="response-form" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required />
+    
+                    <label for="contact">Contact Number:</label>
+                    <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" required />
+    
+                    <button type="submit">Submit</button>
+                </form>
+                <!-- <form id="response-form" method="POST" action="/post">
+                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="contact" name="contact" required>
+                    <button type="submit">Submit</button>
+                  </form> -->
+                  
+                <p id="submission-message" style="display: none; color: green; font-weight: bold;">
+                    Your response has been sent!
+                </p>
+                
+                <script>
+                    document.getElementById('contact-form').addEventListener('submit', async (event) => {
+                      event.preventDefault(); // Prevent the default form submission
+                      const form = event.target;
+                      const formData = new FormData(form);
+                  
+                      try {
+                        await fetch('/', {
+                          method: 'POST',
+                          body: formData,
+                        });
+                        alert('Form submitted successfully!');
+                        form.reset();
+                      } catch (error) {
+                        alert('There was an error submitting the form. Please try again.');
+                      }
+                    });
+                  </script>
+            </div>
+        </div>
+       
+    
+        <!-- New Contact Card -->
+        <div class="contact-card">
+            <h3>Contact</h3>
+            <div class="contact-info">
+                <div>
+                    <img src="phone_.png" alt="Phone Icon"> <!-- Phone icon -->
+                    <p>+91 903 658 4366</p>
+                </div>
+                <div>
+                    <img src="email.jpg" alt="Email Icon"> <!-- Email icon -->
+                    <p>kiranchougala.business@gmail.com</p>
+                </div>
+                <div>
+                    <img src="location.jpg" alt="Location Icon"> <!-- Location icon -->
+                    <p>Bangalore, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <!-- <section id="contact-section" class="target-section contact">
+        <div class="content-box">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="tile-menu">
+            <div class="tile">
+                <h4></h4>
+                <p>kiranchougala.business@gmail.com</p>
+            </div>
+            <div class="tile">
+                <h4></h4>
+                <p>+91 903 658 4366</p>
+            </div>
+            <div class="tile">
+                <h4></h4>
+                <p>Bangalore, India</p>
+            </div>
+    </section>
+  -->
+    
+    <script>
+        // JavaScript code here
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("response-form").addEventListener("submit", function () {
+    alert("Thank you for submitting your details!");
+    document.getElementById("submission-message").style.display = "block";
+});
+
+        });
+    </script>
+    
+    
+    
+
+    
+</body>
+</html>
