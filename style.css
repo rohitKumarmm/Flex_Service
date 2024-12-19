@@ -546,7 +546,7 @@ body {
     margin-bottom: 30px;
 }
 
-.contact-card .contact-info {
+/* .contact-card .contact-info {
     display: flex; 
     justify-content: space-between; 
     align-items: center;
@@ -558,7 +558,22 @@ body {
 .contact-card .contact-info div {
     display: flex;
     align-items: center; /* Align icons with text */
+} */
+
+@media (max-width: 768px) {
+    .contact-card .contact-info {
+        flex-direction: column; /* Stack the elements vertically */
+        align-items: flex-start; /* Align items to the left */
+        gap: 10px; /* Add spacing between items */
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+        margin-bottom: 20px; /* Reduce bottom margin */
+    }
+
+    .contact-card .contact-info div {
+        width: 100%; /* Make each item take the full width */
+    }
 }
+
 
 .contact-card .contact-info img {
     width: 16px; /* Adjust icon size */
