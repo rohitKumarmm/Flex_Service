@@ -85,8 +85,8 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('backtile.jpg');
     background-size: cover;
     background-position: center;
-    height: 120vh;
-    padding: 50px 20px;
+    height: auto;
+    padding: 20px;
     display: flex;
     justify-content: flex-start; 
     align-items: center; 
@@ -116,7 +116,8 @@ body {
     justify-content: center; 
     align-items: center; 
     margin: 20px auto; 
-    padding: 20px 50px;
+    padding: 15px;
+    width:100%;
     text-align: center;
     background-color: rgba(14, 152, 186, 0.6); 
     border-radius: 8px;
@@ -133,21 +134,22 @@ body {
 }
 @media screen and (max-width: 768px) {
     .nav-links {
-        display: none;
+        display: flex;
         flex-direction: column;
         width: 100%;
         text-align: center;
+        gap:10px;
     }
     .navbar {
         padding: 15px 20px;
     }
 
     .hero h1 {
-        font-size: 48px;
+        font-size: 36px;
     }
 
     .hero p {
-        font-size: 20px;
+        font-size: 18px;
     }
     #explore-btn {
         padding: 15px 35px;
@@ -160,11 +162,11 @@ body {
 }
 @media screen and (max-width: 480px) {
     .hero h1 {
-        font-size: 36px;
+        font-size: 28px;
     }
 
     .hero p {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     #explore-btn {
@@ -197,8 +199,8 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('backtile.jpg');
     background-size: cover;
     background-position: center;
-    height: 120vh;
-    padding: 50px 20px;
+    height: auto;
+    padding:  20px;
     display: flex;
     justify-content: flex-start; 
     align-items: center; 
@@ -216,8 +218,8 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('backtile.jpg');
     background-size: cover;
     background-position: center;
-    height: 120vh;
-    padding: 50px 20px;
+    height: auto;
+    padding:  20px;
     display: flex;
     justify-content: flex-start; 
     align-items: center; 
@@ -479,7 +481,7 @@ body {
 .form-card {
     margin: 20px auto;
     padding: 20px;
-    width: 80%;
+    width: 90%;
     max-width: 600px;
     border: 2px solid #ddd;
     border-radius: 10px;
@@ -559,8 +561,8 @@ body {
 }
 
 .contact-card .contact-info img {
-    width: 20px; /* Adjust icon size */
-    height: 20px;
+    width: 16px; /* Adjust icon size */
+    height: 16px;
     margin-right: 10px; /* Space between icon and text */
 }
 
@@ -568,6 +570,7 @@ body {
     color: black;
     margin: 0;
     font-weight: bold;
+    font-size:14px;
 }
 
 .service-card h3 {
@@ -577,8 +580,8 @@ body {
 } 
 .services-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns:  1fr;
+    gap: 10px;
     justify-content: center;
     margin: 20px 0;
 }
@@ -587,17 +590,18 @@ body {
     background: white;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     border-radius: 5px;
 }
 
 .service-tile p{
     color: #100101;
+    font-size:14px;
 }
 .service-tile h3 {
     margin-bottom: 10px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     color: #100101;
 }
